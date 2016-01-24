@@ -2,7 +2,7 @@
 
 Author: Zhong Ren, David Norris and Afnan Alawani
 
-Video records:
+Game video links:
 
 https://www.youtube.com/watch?v=XxIaOh0mwSs
 
