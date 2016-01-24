@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="64" height="64" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="ForestTiles" tilewidth="32" tileheight="32">
+  <image source="Tilesheets/ForestTiles.png"/>
+ </tileset>
+ <layer name="Ground" width="64" height="64">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2WYQ7CIAxG5wk9hl7E3WFeRI6nPyRpmha7hbLNvJd8WYIIfBRaHtM0PXbQ6/udg8pCr+HlyPIQ+V90LGvsYijDv45Lcdqja4/6W6Ms/1Z8ysr2LbJiG1Fv9rjLW5Tl/3pZr3/KhVv8tzQiF/bEmzPi9fbpdzeUnQtH+I9o+ehpKDsXHsX/6FpQz8oR/Pfyfgb/s9Pm3X+dC3rUvaLm7u3/V3x0zpb+rRwgc8HWt46WnDvDvz5nVboGaf9WbZic9pbq+F67XFemf30G5RmI+u+poubvWQO8+Ot7Pxvf6t+7N9KD1y79WbHXv2eff33mW6r+bw219kfuee0byQHZ8ffyr1b1uDhq7YtWfUuNroG6plv7Le+97Cu9Wu8+b188Rfxnxf/ob78R8T+D/z3jL98//xL/nu/4M8YfAAAAAAAAAAAAAAAAAAAAAAAAAOBsvAEm5oQtAEAAAA==
+  </data>
+ </layer>
+ <layer name="Detail" width="64" height="64">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2YSY7UMBSGX8kSB2AFBwAx9oYDNAsERwAx1q5L6r5G1wYukBIb5nlGqt40e+glzdDM8y2Q+CPyFNdTBlfKLoT0/9IXO+Uk5ec/sV/SF5Hj4AQ4B/oN+6fA6Sna18GzCGWuoSGWFoBr4BI2l13zManYBs6DC+Bg0dfY8ffB4QZeoiObrvmYFBwD26W8B/Reix2/jususLtify/YV9G+HxxoaNd99W/a8lARf2r/uz7zZ8DZhvZZ5wCNP7X/F+dAncd7Gtrm5f8SGBSMEpBft87jkw1tdf5Lgvi7kMd1BfPiVXANXAc3wE1XtmdFGeJ3qP+x418GKx15hVhfgzfgLdgC71x5TS1D/P5X/vek+/r8AJuH4BF4DJ6Ap4G5QltesVPm438+zkel2xr9FR39Br6DH+An+BWYK4TkFUckvf96n+k6ruO8WlMfesfeQv9vgzvgLrgH7rvJOaLr+m/LBdOH2PHrOu6vs1ofm9/12PeI9QP4CD6Bz+CL+zvvafyx3gH6pg+x41dPx159tUD3de3V3G4QQNf1RcdvQ0rf5+H/2NT9/bXivzW382Osyh/y3zOZvB9Cxsr/7beUvqf03+b7vu8at50jbPzWv6rY23KlgXdezobXN5HJdSBm/Dbfr/LdzhHWt6yCkVf6Mfr47TbH6PXKvolMrgMx49dx9Z//YU1dS40988pZ8uj8fPXavk/aMnb8/lzv+15V13I5Aeq1fZ+0Zcz4d0icnG1WnmPzwtV7LxLf/0UJz/dSfwvKcO2Rq/deJL7/Xb//hLZPe/225z62/7G/+bZdr+38tuc+tv8URVEURVEURVEURVEURVEURVEURVEURVEURVEURVH/m/4AuhhNNgBAAAA=
+  </data>
+ </layer>
+ <layer name="Clip" width="64" height="64" visible="0">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3VQQrDMAwEQH+o/VLymry7p0AwLj2UTQSaAWGfLC9YyTHGOIpXUvr8f8mfP79iXe/XjfzrfRfyr/epXhXrer/O5L+vT9W6w9wn3Xue8Scyf7tPR/LX9g6fXz3/Hj6/ev7XyL6Bp/9xv77/28i/gSpW+dPzX8kq/x7sVbFm5/zPaxfn/M8rAAAAAAAAAAAAQDcfSKVdwQBAAAA=
+  </data>
+ </layer>
+ <objectgroup name="Objects" width="64" height="64">
+  <object name="PlayerStart" x="39" y="33" width="56" height="56"/>
+  <object name="Portal1" x="264" y="39" width="53" height="54">
+   <properties>
+    <property name="DestinationTileLocation" value="23,45"/>
+    <property name="LevelName" value="0"/>
+   </properties>
+  </object>
+  <object name="Portal2" x="964" y="291" width="55" height="59">
+   <properties>
+    <property name="DestinationTileLocation" value="23,45"/>
+    <property name="LevelName" value="1"/>
+   </properties>
+  </object>
+  <object name="Portal3" x="362" y="613" width="45" height="57">
+   <properties>
+    <property name="DestinationTileLocation" value="23,45"/>
+    <property name="LevelName" value="2"/>
+   </properties>
+  </object>
+  <object name="Portal4" x="1121" y="613" width="51" height="55">
+   <properties>
+    <property name="DestinationTileLocation" value="23,45"/>
+    <property name="LevelName" value="Boss"/>
+   </properties>
+  </object>
+  <object name="" x="1358" y="109" width="1"/>
+ </objectgroup>
+ <layer name="Overlay" width="64" height="64">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3OwQkAIAwEwbSjLWn/dZgW8jqQGdj/VgFTq9vpiaDT3fQEAAAAAAAAAAAAAAAAAAB85gFQAi9SAEAAAA==
+  </data>
+ </layer>
+</map>

@@ -1,0 +1,264 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TiledLib</name>
+    </assembly>
+    <members>
+        <member name="T:TiledLib.MapObject">
+            <summary>
+            An arbitrary object placed on an ObjectLayer.
+            </summary>
+        </member>
+        <member name="P:TiledLib.MapObject.Name">
+            <summary>
+            Gets the name of the object.
+            </summary>
+        </member>
+        <member name="P:TiledLib.MapObject.Type">
+            <summary>
+            Gets the type of the object.
+            </summary>
+        </member>
+        <member name="P:TiledLib.MapObject.Location">
+            <summary>
+            Gets the location of the object.
+            </summary>
+        </member>
+        <member name="P:TiledLib.MapObject.Properties">
+            <summary>
+            Gets a list of the object's properties.
+            </summary>
+        </member>
+        <member name="T:TiledLib.PropertyCollection">
+            <summary>
+            An enumerable collection of properties.
+            </summary>
+        </member>
+        <member name="M:TiledLib.PropertyCollection.GetEnumerator">
+            <summary>
+            Gets an enumerator that can be used to iterate over the properties in the collection.
+            </summary>
+            <returns>An enumerator over the properties.</returns>
+        </member>
+        <member name="P:TiledLib.PropertyCollection.Item(System.String)">
+            <summary>
+            Gets a Property with the given name.
+            </summary>
+            <param name="name">The name of the property to retrieve.</param>
+            <returns>The Property if a matching one is found or null if no Property exists for the given name.</returns>
+        </member>
+        <member name="T:TiledLib.Property">
+            <summary>
+            A simple key-value property pair.
+            </summary>
+        </member>
+        <member name="P:TiledLib.Property.Name">
+            <summary>
+            Gets the name of the property.
+            </summary>
+        </member>
+        <member name="P:TiledLib.Property.Value">
+            <summary>
+            Gets the raw string value of the property.
+            </summary>
+        </member>
+        <member name="T:TiledLib.Orientation">
+            <summary>
+            Defines the possible orientations for a Map.
+            </summary>
+        </member>
+        <member name="F:TiledLib.Orientation.Orthogonal">
+            <summary>
+            The tiles of the map are orthogonal.
+            </summary>
+        </member>
+        <member name="F:TiledLib.Orientation.Isometric">
+            <summary>
+            The tiles of the map are isometric.
+            </summary>
+        </member>
+        <member name="T:TiledLib.MapReader">
+            <summary>
+            Reads in a Map from an XNB through a ContentManager.
+            </summary>
+        </member>
+        <member name="M:TiledLib.MapReader.Read(Microsoft.Xna.Framework.Content.ContentReader,TiledLib.Map)">
+            <summary>
+            Reads a map from the ContentReader.
+            </summary>
+            <param name="input">The ContentReader for reading the file.</param>
+            <param name="existingInstance">The existing Map instance.</param>
+            <returns>A new Map instance.</returns>
+        </member>
+        <member name="T:TiledLib.Tile">
+            <summary>
+            A single tile in a TileLayer.
+            </summary>
+        </member>
+        <member name="M:TiledLib.Tile.Clone">
+            <summary>
+            Creates a copy of the current tile.
+            </summary>
+            <returns>A new Tile with the same properties as the current tile.</returns>
+        </member>
+        <member name="P:TiledLib.Tile.Texture">
+            <summary>
+            Gets the Texture2D to use when drawing the tile.
+            </summary>
+        </member>
+        <member name="P:TiledLib.Tile.Source">
+            <summary>
+            Gets the source rectangle of the tile.
+            </summary>
+        </member>
+        <member name="P:TiledLib.Tile.Properties">
+            <summary>
+            Gets the collection of properties for the tile.
+            </summary>
+        </member>
+        <member name="P:TiledLib.Tile.Color">
+            <summary>
+            Gets or sets a color associated with the tile.
+            </summary>
+        </member>
+        <member name="T:TiledLib.Map">
+            <summary>
+            A full map from Tiled.
+            </summary>
+        </member>
+        <member name="M:TiledLib.Map.WorldPointToTileIndex(Microsoft.Xna.Framework.Vector2)">
+            <summary>
+            Converts a point in world space into tile indices that can be used to index into a TileLayer.
+            </summary>
+            <param name="worldPoint">The point in world space to convert into tile indices.</param>
+            <returns>A Point containing the X/Y indices of the tile that contains the point.</returns>
+        </member>
+        <member name="M:TiledLib.Map.GetLayer(System.String)">
+            <summary>
+            Gets a layer by name.
+            </summary>
+            <param name="name">The name of the layer to retrieve.</param>
+            <returns>The layer with the given name.</returns>
+        </member>
+        <member name="M:TiledLib.Map.Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch)">
+            <summary>
+            Performs a basic rendering of the map.
+            </summary>
+            <param name="spriteBatch">The SpriteBatch to use to render the map.</param>
+        </member>
+        <member name="M:TiledLib.Map.Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Rectangle)">
+            <summary>
+            Draws an area of the map defined in world space (pixel) coordinates.
+            </summary>
+            <param name="spriteBatch">The SpriteBatch to use to render the map.</param>
+            <param name="worldArea">The area of the map to draw in world coordinates.</param>
+        </member>
+        <member name="P:TiledLib.Map.Version">
+            <summary>
+            Gets the version of Tiled used to create the Map.
+            </summary>
+        </member>
+        <member name="P:TiledLib.Map.Orientation">
+            <summary>
+            Gets the orientation of the map.
+            </summary>
+        </member>
+        <member name="P:TiledLib.Map.Width">
+            <summary>
+            Gets the width (in tiles) of the map.
+            </summary>
+        </member>
+        <member name="P:TiledLib.Map.Height">
+            <summary>
+            Gets the height (in tiles) of the map.
+            </summary>
+        </member>
+        <member name="P:TiledLib.Map.TileWidth">
+            <summary>
+            Gets the width of a tile in the map.
+            </summary>
+        </member>
+        <member name="P:TiledLib.Map.TileHeight">
+            <summary>
+            Gets the height of a tile in the map.
+            </summary>
+        </member>
+        <member name="P:TiledLib.Map.Properties">
+            <summary>
+            Gets a list of the map's properties.
+            </summary>
+        </member>
+        <member name="P:TiledLib.Map.Tiles">
+            <summary>
+            Gets a collection of all of the tiles in the map.
+            </summary>
+        </member>
+        <member name="P:TiledLib.Map.Layers">
+            <summary>
+            Gets a collection of all of the layers in the map.
+            </summary>
+        </member>
+        <member name="T:TiledLib.TileLayer">
+            <summary>
+            A map layer containing tiles.
+            </summary>
+        </member>
+        <member name="T:TiledLib.Layer">
+            <summary>
+            An abstract base for a layer in a map.
+            </summary>
+        </member>
+        <member name="P:TiledLib.Layer.Name">
+            <summary>
+            Gets the name of the layer.
+            </summary>
+        </member>
+        <member name="P:TiledLib.Layer.Width">
+            <summary>
+            Gets the width (in tiles) of the layer.
+            </summary>
+        </member>
+        <member name="P:TiledLib.Layer.Height">
+            <summary>
+            Gets the height (in tiles) of the layer.
+            </summary>
+        </member>
+        <member name="P:TiledLib.Layer.Visible">
+            <summary>
+            Gets or sets the whether the layer is visible.
+            </summary>
+        </member>
+        <member name="P:TiledLib.Layer.Opacity">
+            <summary>
+            Gets or sets the opacity of the layer.
+            </summary>
+        </member>
+        <member name="P:TiledLib.Layer.Properties">
+            <summary>
+            Gets the list of properties for the layer.
+            </summary>
+        </member>
+        <member name="P:TiledLib.TileLayer.Tiles">
+            <summary>
+            Gets the layout of tiles on the layer.
+            </summary>
+        </member>
+        <member name="T:TiledLib.MapObjectLayer">
+            <summary>
+            A layer comprised of objects.
+            </summary>
+        </member>
+        <member name="M:TiledLib.MapObjectLayer.GetObject(System.String)">
+            <summary>
+            Gets a MapObject by name.
+            </summary>
+            <param name="objectName">The name of the object to retrieve.</param>
+            <returns>The MapObject with the given name.</returns>
+        </member>
+        <member name="P:TiledLib.MapObjectLayer.Objects">
+            <summary>
+            Gets the objects on the current layer.
+            </summary>
+        </member>
+    </members>
+</doc>
