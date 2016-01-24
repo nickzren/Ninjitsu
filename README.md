@@ -1,6 +1,6 @@
 # Ninjitsu - Platformer + 2D Fighter + RPG
 
-Author: Zhong Ren, David Norris and Afnan Alawani
+Author: Nick Ren, David Norris and Afnan Alawani
 
 Game video links:
 
